@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SdiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yHE-2O-xHV">
+                                <rect key="frame" x="16" y="20" width="288" height="474"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Zo5-xz-iQP">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="100" constant="120" placeholder="YES" id="TL7-vb-UyT"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Zo5-xz-iQP" secondAttribute="trailing" id="B0N-WF-bDy"/>
+                                    <constraint firstItem="Zo5-xz-iQP" firstAttribute="top" secondItem="yHE-2O-xHV" secondAttribute="top" id="Z1T-R2-6ii"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zo5-xz-iQP" secondAttribute="bottom" id="dhG-5v-pxf"/>
+                                    <constraint firstItem="Zo5-xz-iQP" firstAttribute="leading" secondItem="yHE-2O-xHV" secondAttribute="leading" id="oP5-Dv-YaS"/>
+                                    <constraint firstItem="Zo5-xz-iQP" firstAttribute="width" secondItem="yHE-2O-xHV" secondAttribute="width" id="ysw-D5-fd3"/>
+                                </constraints>
+                            </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="x16-Xi-diP">
+                                <rect key="frame" x="16" y="502" width="288" height="46"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wg3-nF-Gmf">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="46"/>
+                                        <state key="normal" title="insert"/>
+                                        <connections>
+                                            <action selector="onInsertButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Vh-o4-ele"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfA-24-WRF">
+                                        <rect key="frame" x="96" y="0.0" width="96" height="46"/>
+                                        <state key="normal" title="delete"/>
+                                        <connections>
+                                            <action selector="onDeleteButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="vUO-2J-RU1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AW4-eQ-zU0">
+                                        <rect key="frame" x="192" y="0.0" width="96" height="46"/>
+                                        <state key="normal" title="update"/>
+                                        <connections>
+                                            <action selector="onUpdateButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="b4j-QF-r5P"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="GxH-C9-lD9"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="x16-Xi-diP" firstAttribute="top" secondItem="yHE-2O-xHV" secondAttribute="bottom" constant="8" id="7Oy-Dx-cSg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x16-Xi-diP" secondAttribute="trailing" constant="16" id="HUY-FW-J6W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yHE-2O-xHV" secondAttribute="trailing" constant="16" id="SGF-60-Cqd"/>
+                            <constraint firstItem="yHE-2O-xHV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ThB-rG-GL2"/>
+                            <constraint firstItem="yHE-2O-xHV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ysb-vV-O1o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x16-Xi-diP" secondAttribute="bottom" constant="20" id="lSX-Hz-ok6"/>
+                            <constraint firstItem="x16-Xi-diP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="p3R-09-82T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="stackView" destination="Zo5-xz-iQP" id="LiS-K8-H0N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114.375" y="118.30985915492958"/>
+        </scene>
+    </scenes>
+</document>
